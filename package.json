@@ -1,0 +1,30 @@
+{
+  "name": "ex-app",
+  "version": "1.0.0",
+  "description": "express-demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzcc666GtHb/express-demo.git"
+  },
+  "author": "xu",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.4.2",
+    "config-lite": "^2.1.0",
+    "connect-mongo": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "mongoose": "^5.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
