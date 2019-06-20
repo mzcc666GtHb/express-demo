@@ -36,6 +36,7 @@ class User extends BaseComponent {
             }
 
             try {
+                console.log(this);
                 const encryptedPassword = this.encryptPassword(password);
                 const user = await UserModle.findOne({username});
                 console.log('user', user);
