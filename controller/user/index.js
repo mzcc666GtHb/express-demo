@@ -36,15 +36,14 @@ class User extends BaseComponent {
             }
 
             try {
-                console.log(this);
                 const encryptedPassword = this.encryptPassword(password);
                 const user = await UserModle.findOne({username});
                 console.log('user', user);
                 if (!user) {
                     const user_id = await this.getId('user_id');
                     const registe_time = new dtime(new Date()).format('YYYY-MM-DD HH:mm');
-                    const newUser = {username, password: encryptedPassword, registe_time,user_id};
-                    const newUserInfo = {username, registe_time, user_id,id:user_id};
+                    const newUser = {username, password: encryptedPassword, registe_time, user_id};
+                    const newUserInfo = {username, registe_time, user_id, id: user_id};
                     UserModle.create(newUser);
                     const createUser = new UserInfoModle(newUserInfo);
                     const userInfo = await createUser.save();
@@ -59,7 +58,7 @@ class User extends BaseComponent {
                     return;
                 } else {
                     const userInfo = await UserInfoModle.findOne({user_id: user.user_id});
-                    console.log('userInfo',userInfo);
+                    console.log('userInfo', userInfo);
                     res.send(userInfo);
                 }
 
