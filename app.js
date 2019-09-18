@@ -25,7 +25,7 @@ app.all('*', (req, res, next) => {
 });
 router(app);
 
-app.use(express.static('./public'));
+// app.use(express.static('./public'));
 app.listen(config.port, () => {
     console.log(
         chalk.green(`成功监听端口:${config.port}`)

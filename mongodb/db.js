@@ -15,7 +15,6 @@ db.once('open', () => {
     );
 });
 db.on('error', err => {
-
     console.error(
         chalk.red('数据库链接出错')
     );
